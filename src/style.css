@@ -1,0 +1,127 @@
+body {
+  background-color: #d3d3d3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box-list {
+  position: relative;
+  background-color: #fff;
+  width: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  height: 50vh;
+  overflow: hidden;
+}
+
+.list-title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #d3d3d3;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.list-title h3 {
+  font-size: 1.5rem;
+}
+
+.formInput {
+  width: 100%;
+  display: flex;
+}
+
+.formInput input {
+  padding: 1rem;
+  font-style: italic;
+  font-size: 1rem;
+  height: 3vh;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.taskList {
+  height: 27vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.clear {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.2rem;
+  text-align: center;
+  background-color: #e2e2e2;
+  font-size: 1.5rem;
+}
+
+.task-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid #d3d3d3;
+}
+
+.wrapper form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 200%;
+  padding: 0 1rem;
+}
+
+.checkbox {
+  margin-right: 0.7rem;
+}
+
+.task-text {
+  padding: 1rem 0;
+  border: none;
+  width: 300%;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #d3d3d3;
+}
+
+#icon {
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1200px) {
+  .box-list {
+    width: 75%;
+  }
+
+  .wrapper form {
+    width: 225%;
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .wrapper form {
+    width: 175%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box-list {
+    width: 90%;
+  }
+
+  .wrapper form {
+    width: 150%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .wrapper form {
+    width: 100%;
+  }
+}
