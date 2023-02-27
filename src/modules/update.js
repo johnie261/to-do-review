@@ -1,6 +1,4 @@
-const taskContainer = document.querySelector('.taskList');
-const clearTasks = document.querySelector('.clear');
-// const formInput = document.querySelector('.formInput');
+import { taskContainer } from './crud.js';
 
 const updateStatus = (id) => {
   const tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -41,8 +39,8 @@ taskContainer.addEventListener('click', (e) => {
   }
 });
 
+const clearTasks = document.querySelector('.clear');
 clearTasks.addEventListener('click', (e) => {
-  //
   clearMarked();
   const clear = e.target;
   const sibling = clear.closest('.list-container').querySelectorAll('.task-text');
@@ -51,5 +49,4 @@ clearTasks.addEventListener('click', (e) => {
       e.parentElement.parentElement.parentElement.remove();
     }
   });
-  // localStorage.setItem('tasks', JSON.stringify(tasks));
 });

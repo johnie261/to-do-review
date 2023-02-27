@@ -1,7 +1,7 @@
-const taskContainer = document.querySelector('.taskList');
+/* eslint-disable import/prefer-default-export */
 const taskDesc = document.querySelector('.desc');
-const formInput = document.querySelector('.formInput');
-// const clearTasks = document.querySelector('.clear');
+const taskContainer = document.querySelector('.taskList');
+export { taskContainer };
 
 let tasks = JSON.parse(localStorage.getItem('tasks')) ? JSON.parse(localStorage.getItem('tasks')) : [];
 
@@ -58,6 +58,7 @@ const addTask = (arr, newTaskInput) => {
   localStorage.setItem('tasks', JSON.stringify(tasks));
 };
 
+const formInput = document.querySelector('.formInput');
 formInput.addEventListener('submit', (e) => {
   e.preventDefault();
 
@@ -106,8 +107,6 @@ window.saveList = (index) => {
   localStorage.setItem('tasks', JSON.stringify(tasks));
   showTasks();
 };
-
-// interactive
 
 window.onload = () => {
   if (localStorage.getItem('tasks')) {
